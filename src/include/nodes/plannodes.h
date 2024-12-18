@@ -135,6 +135,8 @@ typedef struct Plan
 	Cardinality plan_rows;		/* number of rows plan is expected to emit */
 	int			plan_width;		/* average row width in bytes */
 
+	bool jit; /* true if the plan node is worth to compile */
+
 	/*
 	 * information needed for parallel query
 	 */
